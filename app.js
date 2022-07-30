@@ -18,6 +18,7 @@
 
 const express = require('express');
 const bookRoutes = require('./routes/book');
+const bodyParser=require('body-parser');
 const app = express();
 const port = 3000;
 
@@ -27,6 +28,7 @@ app.get("/",(req,res)=>{
     res.send("Hello World");
 });
  app.use("/book",bookRoutes);
+ app.use(bodyParser.json());
 
 app.listen(port,()=>{
     console.log(`app listening on port ${port}`);

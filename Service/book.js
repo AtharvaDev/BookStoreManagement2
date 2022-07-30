@@ -13,8 +13,8 @@ exports.getAllBook= async () =>{
     
     return books;
 }
-exports.deleteBook=async(req,res)=> {
-    const bookdel=await repo.deleteBook();
+exports.deleteBook=async(id)=> {
+    const bookdel=await repo.deleteBook(id);
     console.log('bookdel');
     return bookdel;
 

@@ -21,11 +21,11 @@ exports.getAllBook= async() => {
     }
 
 }
-exports.deleteBook=async(req,res)=>{
+exports.deleteBook=(id)=>{
     const d=`DELETE FROM public.book
-	WHERE bookid=108 returning *;`
+	WHERE bookid=${id} returning *;`
     console.log(d);
-    const resultDelete = await client.query(d);
+    const resultDelete = client.query(d);
     console.log(resultDelete);
     return  resultDelete.rows;
 }

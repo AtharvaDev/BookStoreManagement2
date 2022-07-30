@@ -30,9 +30,11 @@ exports.createBook =async (req,res)=>{
     // return BookService.createBook();
 }
 exports.deleteBook=async(req,res)=>{
-    const bookDelete=await BookService.deleteBook();
+    const id=req.params.id;
+    console.log(id);
+    const bookDelete=await BookService.deleteBook(id);
     console.log(bookDelete);
-    res.send(bookDelete);
+    res.json(bookDelete);
 }
 exports.editBook=async(req,res)=>{
   const bookedit=await BookService.editBook();

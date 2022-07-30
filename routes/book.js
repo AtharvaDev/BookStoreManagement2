@@ -6,7 +6,7 @@ const bookcontroller = require('../controllers/book');
 
 // router.get('/view',controller.orderid);
 router.post('/create',bookcontroller.createBook);
-router.delete('/delete',bookcontroller.deleteBook);
+router.delete('/delete/:id',bookcontroller.deleteBook);
 router.put('/edit',bookcontroller.editBook);
 router.get('/catogery',bookcontroller.catogeryBook)
 
