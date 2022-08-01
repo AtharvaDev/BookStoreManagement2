@@ -7,13 +7,14 @@ const client = new Client({
     database : "neebal"
 });
 client.connect();
-client.query('Select * from customer',(err,res)=>{
-    if(!err){
-        console.log('Connectd');
-        console.log(res.rows);
-    }
-    if(err){
-        console.log(err.message);
-    }
-    client.end;
-});
+module.exports =client;
+// client.query('Select * from customer',(err,res)=>{
+//     if(!err){
+//         console.log('Connectd');
+//         console.log(res.rows);
+//     }
+//     if(err){
+//         console.log(err.message);
+//     }
+//     client.end;
+// });
