@@ -27,6 +27,7 @@ app.use(express.json()); // middlewear
 app.get("/",(req,res)=>{
     res.send("Hello World");
 });
+
  app.use("/book",bookRoutes);
  app.use(bodyParser.json());
 
